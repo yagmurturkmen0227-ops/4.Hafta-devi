@@ -1,0 +1,141 @@
+/* Genel Ayarlar */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #fff0f5; /* LavenderBlush - tatlı pembe arka plan */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Ana Taşıyıcı: Sol ve Sağ Paneli Yan Yana Tutar */
+.panel-container {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Ortak Kart Tasarımı */
+.card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 8px 16px rgba(255, 105, 180, 0.15); /* Pembe gölge */
+  border: 2px solid #ffe6f2;
+}
+
+.card h2 {
+  color: #ff66b2;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+/* Form Kısmı (Sol) */
+.form-section {
+  flex: 1; /* Alanı eşit paylaşır */
+}
+
+.input-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  font-weight: bold;
+  color: #ff66b2;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.input-group input {
+  padding: 10px;
+  border: 2px solid #ffb3d9;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #ff3399;
+}
+
+.btn-add {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff66b2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.btn-add:hover {
+  background-color: #ff3399;
+}
+
+/* Tablo Kısmı (Sağ) */
+.list-section {
+  flex: 1.5; /* Tabloya biraz daha fazla alan veriyoruz */
+}
+
+.empty-message {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.student-table th, .student-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ffe6f2;
+}
+
+.student-table th {
+  color: #ff66b2;
+  font-weight: bold;
+}
+
+.student-table td {
+  color: #555;
+}
+
+.btn-delete {
+  padding: 6px 12px;
+  background-color: #fff;
+  color: #ff4d4d;
+  border: 1px solid #ff4d4d;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-delete:hover {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+/* Mobil Uyumluluk: Ekran küçülünce alt alta dilsinler */
+@media (max-width: 768px) {
+  .panel-container {
+    flex-direction: column;
+  }
+}
